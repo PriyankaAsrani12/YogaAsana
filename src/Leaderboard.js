@@ -1,12 +1,14 @@
 import React from 'react'
+import './Leaderboard.css';
 
 function Leaderboard() {
     return (
-        <div>
+        <div className='container'>
             <div>
                 <h1>Leaderboard</h1>
+                <hr />
             </div>
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                     <th scope="col">Rank</th>

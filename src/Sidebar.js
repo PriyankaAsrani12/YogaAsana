@@ -1,11 +1,8 @@
 import React from 'react';
 import './Sidebar.css';
 import SidebarChat from './SidebarChat';
-import DonutLargeIcon from '@material-ui/icons/DonutLarge';
-import ChatIcon from '@material-ui/icons/Chat';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {SearchOutlined} from '@material-ui/icons';
-import {Avatar,IconButton} from '@material-ui/core'
+import {Avatar} from '@material-ui/core'
 
 function Sidebar() {
     return ( 

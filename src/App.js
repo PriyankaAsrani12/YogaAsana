@@ -1,20 +1,13 @@
 import React from 'react';
 import './App.css';
-import Chat from './Chat';
-import Sidebar from "./Sidebar"
-import Profile from "./Profile"
-
+import About from "./About"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
-
-        <div className = "app" > 
-            <div className="app_body">
-                <Sidebar />
-                <Chat />
-            </div>
+        <div> 
+            <About/>
         </div>
-
     );
 }
 
