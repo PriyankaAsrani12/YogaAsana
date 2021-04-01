@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Link, Route, Switch } from 'react-router-dom';
 import Header from './Header'
 import Practise from './Practise';
+import Discussion from './Discussion';
 
 function App() {
     return (
@@ -32,7 +33,7 @@ function App() {
             />
             <Route
               path="/Discuss"
-              component={Sidebar}
+              component={Discussion}
             />
              <Route
               path="/"

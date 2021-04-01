@@ -48,7 +48,7 @@ class Header extends Component {
                                         <NavLink href="/Practise"><span className="fa fa-list fa-lg"></span> Practise </NavLink>
                                     </NavItem>
                                     <NavItem active>
-                                        <NavLink href="/Leaderboard"><span className="fa fa-list fa-lg"></span> Discuss </NavLink>
+                                        <NavLink href="/Discuss"><span className="fa fa-list fa-lg"></span> Discuss </NavLink>
                                     </NavItem>
                                     <NavItem active>
                                         <NavLink href="/Leaderboard"><span className="fa fa-list fa-lg"></span> Leaderboard </NavLink>
