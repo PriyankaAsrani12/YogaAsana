@@ -10,6 +10,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import Header from './Header'
 import Practise from './Practise';
 import Discussion from './Discussion';
+import Profile from './Profile';
 
 function App() {
     return (
@@ -35,11 +36,17 @@ function App() {
               path="/Discuss"
               component={Discussion}
             />
+            <Route
+              path="/Profile"
+              component={Profile}
+            
+            />
              <Route
               path="/"
               component={Cover}
             
             />
+            
           </Switch>
         </BrowserRouter>
         </div>

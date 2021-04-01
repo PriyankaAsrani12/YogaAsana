@@ -53,6 +53,9 @@ class Header extends Component {
                                     <NavItem active>
                                         <NavLink href="/Leaderboard"><span className="fa fa-list fa-lg"></span> Leaderboard </NavLink>
                                     </NavItem>
+                                    <NavItem active>
+                                        <NavLink href="/Profile"><span className="fa fa-list fa-lg"></span> Profile </NavLink>
+                                    </NavItem>
                                 </Nav>
                                 <Nav className="ml-auto" navbar>
 
