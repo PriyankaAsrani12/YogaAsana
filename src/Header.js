@@ -53,13 +53,33 @@ class Header extends Component {
                                     <NavItem active>
                                         <NavLink href="/Leaderboard"><span className="fa fa-list fa-lg"></span> Leaderboard </NavLink>
                                     </NavItem>
+                                   
+                                </Nav>
+                                <Nav className="ml-auto" navbar>
+                                {
+                                    this.props.user ?
                                     <NavItem active>
                                         <NavLink href="/Profile"><span className="fa fa-list fa-lg"></span> Profile </NavLink>
                                     </NavItem>
-                                </Nav>
-                                <Nav className="ml-auto" navbar>
+                                    :
+                                    <NavItem></NavItem>
+                                 }
+                                    <NavItem active>
+                                        {/* <NavLink href="/"><span className="fa fa-list fa-lg"></span> Logout </NavLink> */}
+                          
+                                        {
+                                            this.props.user ?
 
+                                            <button className = "btn btn-outline-warning" onClick =  {this.props.logout} > Logout </button>
+                                            :
+                                            <button  className = "btn btn-outline-warning" onClick =  {this.props.login} > Login with Google</button>
+
+                                        }      
+                                    </NavItem>
                                 </Nav>
+                                {/* <Nav className="ml-auto" navbar>
+                                    
+                                </Nav> */}
                             </Collapse>
                    
                     </Navbar>
