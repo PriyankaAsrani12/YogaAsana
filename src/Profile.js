@@ -1,14 +1,19 @@
 import React, {Component} from 'react'
 import Streak from './Streak.js'
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom'
+import Cover from "./Cover"
 
 class Profile extends Component {
     constructor(props) {
         super(props);
     } 
 render() { 
+
 return (
 <div className="container my-3">
+    {this.props.user === null?
+     <Cover/>
+    :
     <div className="main-body">
         <div className="row gutters-sm">
             <div className="col-md-6 mb-3">
@@ -69,9 +74,11 @@ return (
             </div>
         </div>
     </div>
+}
 </div>
     )
     }
+
 }
 
 export default Profile

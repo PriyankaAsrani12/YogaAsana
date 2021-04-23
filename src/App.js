@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import './App.css';
 import About from "./About"
 import Cover from "./Cover"
-import Sidebar from "./Sidebar"
 import Leaderboard from './Leaderboard'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom'
-import { Link, Route, Switch } from 'react-router-dom';
-import firebase, { auth, provider } from './firebase.js'
+import { Route, Switch, withRouter } from 'react-router-dom';
+import  { auth, provider } from './firebase.js'
 import Header from './Header'
 import Practise from './Practise';
 import Discussion from './Discussion';
 import Profile from './Profile';
-import { Redirect } from 'react-router-dom';
+import Discuss from './stories/Discuss';
+import Yoga from './yoga/yoga';
 
 class App extends Component {
   constructor(props){
@@ -31,11 +31,11 @@ class App extends Component {
           this.setState({
             user: null,
             redirect: true
-          }
-          );
+          },  () => {
+            this.props.history.push("/");
+            return this.render(<Cover/>)
+           })
         });
-
-  
     }
     login() {
       auth.signInWithPopup(provider)
@@ -59,7 +59,7 @@ class App extends Component {
   render() { 
     return (
         <div> 
-        <Header login={this.login} logout={this.logout} user={this.state.user} />
+        <Header login={this.login} logout={this.logout} user={this.state.user} redirect = {this.props.redirect} />
         <BrowserRouter>
           <Switch>
           <Route
@@ -76,13 +76,22 @@ class App extends Component {
               path="/Leaderboard"
               component={Leaderboard}
             />
-            <Route
+             <Route
+              path="/yoga"
+              component={Yoga}
+            />
+            {/* <Route
               path="/Discuss"
               component={Discussion}
+            /> */}
+             <Route
+              path="/Discuss"
+              // component={Discuss}
+              component={() => <Discuss login={this.login} logout={this.logout} user={this.state.user} />}
             />
             <Route
               path="/Profile"
-              component={() => <Profile login={this.login} logout={this.logout} user={this.state.user} />}
+              component={() => <Profile login={this.login} logout={this.logout} user={this.state.user} redirect = {this.props.redirect}/>}
             
             />
              <Route
@@ -90,7 +99,7 @@ class App extends Component {
               component={Cover}
             
             />
-            
+          
           </Switch>
         </BrowserRouter>
         </div>
@@ -98,4 +107,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withRouter(App);

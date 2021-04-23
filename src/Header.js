@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Navbar, NavbarBrand, Nav, NavbarToggler, NavItem, Button, NavLink
+    Navbar, NavbarBrand, Nav, NavbarToggler, NavItem, NavLink
 } from 'reactstrap';
 import { Collapse } from 'reactstrap';
 import './Header.css';
@@ -52,6 +52,9 @@ class Header extends Component {
                                     </NavItem>
                                     <NavItem active>
                                         <NavLink href="/Leaderboard"><span className="fa fa-list fa-lg"></span> Leaderboard </NavLink>
+                                    </NavItem>
+                                    <NavItem active>
+                                        <NavLink href="/yoga"><span className="fa fa-list fa-lg"></span> Learn </NavLink>
                                     </NavItem>
                                    
                                 </Nav>
