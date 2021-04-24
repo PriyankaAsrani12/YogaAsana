@@ -7,6 +7,9 @@
   .history__header {
     display: flex;
     align-items: center;
+    color: #db1f64;
+    font-size: large;
+
   }
   
   .history__duration {

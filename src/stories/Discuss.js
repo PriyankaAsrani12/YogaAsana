@@ -89,7 +89,7 @@ class Discuss extends Component {
                     :
                     <div></div>
                 }
-                <h1 className="top mt-3">Talk out, loud!</h1>
+                <h2 className="top mt-3">User Posts 📝</h2>
                 <br/>
                 <br/>
                 {/* <img src={meditate} width="300px" height="300px" alt="" /> */}
@@ -104,7 +104,7 @@ class Discuss extends Component {
                                     <input className="inputitem" type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.props.user ? this.props.user.displayName || this.props.user.email : this.state.username}  />
                                         {/* <button className="formbutton">Add it</button> */}
                                     {this.props.user ?
-                                        <button className="addit">Add Story</button>
+                                        <button className="addit">Add Post</button>
                                         :
                                         <div></div>
                                     }              
@@ -124,11 +124,13 @@ class Discuss extends Component {
                                         <li className="myitem" key={item.id}>
                                             <h3>{item.storytitle}</h3>
                                             <p>{item.commentbody}</p>
-                                            <p><span id="tag">{item.user}</span> 
+                                            <p><span id="tag">{item.user}</span> <br/>
+                                            <span id="tag">Posted at: {new Date().toISOString().slice(0, 10)}</span> 
                                             <br/>
+
                                                 {this.props.user ?
                                                     item.user === this.props.user.displayName || item.user === this.props.user.email ?
-                                                        <button className="circle mt-3" onClick={() => this.removeItem(item.id)}>Remove Item</button> : null
+                                                        <button className="btn circle mt-3" onClick={() => this.removeItem(item.id)}>Remove Item</button> : null
                                                     :
                                                     <div></div>
 

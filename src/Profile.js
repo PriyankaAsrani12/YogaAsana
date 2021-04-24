@@ -17,6 +17,7 @@ return (
     <div className="main-body">
         <div className="row gutters-sm">
             <div className="col-md-6 mb-3">
+                <br/>
                 <div className="card">
                     <div className="card-body">
                         <div className="d-flex flex-column align-items-center text-center">
@@ -25,7 +26,7 @@ return (
                                 <h4>{this.props.user ?  this.props.user.displayName: "Unknown"}</h4>
                                 
                                 <button className="btn btn-primary mx-2">Follow</button>
-                                <button className="btn btn-primary">Message</button>
+                                <a  href = "/discuss" className="btn btn-primary">Message</a>
                             </div>
                         </div>
                     </div>

@@ -66,7 +66,7 @@ class Yoga extends Component {
                 {
                    this.state.rend === false ? 
                    <p class="intro">
-                   Become fluent in Yoga! Yoga has over 300 known poses, each beneficial with a unique name and instruction. Choose from the list below to begin benefitting your mind and body with some of Yoga's most beloved poses. Learn the proper name to each pose and become more flexible in life with a how-to video for each pose. <span class="promise">You too, can become a yogi</span>
+                   Become fluent in Yoga! Yoga has over 300 known poses, each beneficial with a unique name and instruction. Choose from the list below to begin benefitting your mind and body with some of Yoga's most beloved poses. Learn the proper name to each pose and become more flexible in life with a how-to video for each pose. <br/><span class="promise">You too, can become a yogi</span>
                    </p>
                    :
                   <div>
@@ -108,11 +108,16 @@ class Yoga extends Component {
                     <option value = "Extended Side Angle">Extended Side Angle</option>
                     <option value = "Forward Bend with Shoulder Opener">Forward Bend with Shoulder Opener</option>
                     <option value = "Butterfly">Butterfly</option>
+                    <option value = "Forearm Stand">Forearm Stand</option>
                     <option value = "Handstand">Handstand</option>
+                    <option value = "Tree">Tree</option>
                     <option value = "Plank">Plank</option>
                     <option value = "Splits">Splits</option>
                     <option value = "Wheel">Wheel</option>
                     <option value = "Sphinx">Sphinx</option>
+                    <option value = "Forearm Stand">Forearm Stand</option>
+                    <option value = "Lotus">Lotus</option>
+                    <option value = "Lotus">Lotus</option>
                 </select>
                 <button type="submit" name="button" class="btn btn-warning" >Enter</button>
                 </form>
