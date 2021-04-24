@@ -57,6 +57,7 @@ class Discuss extends Component {
         itemsRef.on('value', (snapshot) => {
             let items = snapshot.val();
             let newState = [];
+            let d=new Date();
             for (let item in items) {
                 newState.push({
                     id: item,
@@ -64,6 +65,7 @@ class Discuss extends Component {
                     commentbody: items[item].commentbody,
                     name: items[item].name,
                     user: items[item].user
+                    timestamp: d.toLocaleString()
                 });
             }
             this.setState({
@@ -136,6 +138,7 @@ class Discuss extends Component {
 
                                                 }
                                             </p>
+                                            <small class="my-2"><em>Posted at: {item.timestamp}</em></small>
                                         </li>
                                     )
                                 })}
