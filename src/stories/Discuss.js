@@ -64,7 +64,7 @@ class Discuss extends Component {
                     storytitle: items[item].storytitle,
                     commentbody: items[item].commentbody,
                     name: items[item].name,
-                    user: items[item].user
+                    user: items[item].user,
                     timestamp: d.toLocaleString()
                 });
             }
