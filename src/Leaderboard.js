@@ -5,7 +5,7 @@ function Leaderboard() {
     return (
         <div className='container'>
             <div>
-                <h1>Leaderboard</h1>
+                <h1 className = "top mt-1">Leaderboard</h1>
                 <hr />
             </div>
             <table class="table table-hover">
@@ -20,21 +20,15 @@ function Leaderboard() {
                 <tbody>
                     <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Harshita</td>
+                    <td>Kanal</td>
+                    <td>@harshita_kanal</td>
                     </tr>
                     <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td>Priyanka</td>
+                    <td>Asrani</td>
+                    <td>@priyanka_asrani</td>
                     </tr>
                 </tbody>
             </table>
